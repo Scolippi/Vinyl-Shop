@@ -220,6 +220,86 @@ body {
   cursor: pointer;
 }
 
+.hero .hero-text-big {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FAF3E3;
+  display: none;
+}
+
+.hero .hero-text-big__headline {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .hero-text-big__headline h1 {
+  font-size: 6rem;
+  margin-bottom: .5em;
+}
+
+.hero .hero-text-big__headline p {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+.hero .hero-text-big__button {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .hero-text-big__button button {
+  border: none;
+  padding: 1em 2em;
+  border-radius: 8px;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: #FF9F29;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .about-us__cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +500,17 @@ body {
   .about-us__card .card-text button {
     padding: .8em 1.2em;
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  .hero .hero-text-big {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero__text {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
