@@ -16,6 +16,30 @@ body {
 
 .wrapper {
   max-width: 1300px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 2em 3.5em;
+}
+
+.headline {
+  display: block;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.4rem;
+  color: #e6e4e4;
+  padding: 1.6em;
+  text-align: center;
+  position: relative;
 }
 
 .mobile-nav {
@@ -34,6 +58,7 @@ body {
   color: #FAF3E3;
   font-size: 2.3rem;
   background-color: #13120f;
+  z-index: 1000;
 }
 
 .mobile-nav span {
@@ -84,6 +109,7 @@ body {
   text-decoration: none;
   padding: 2.5em 3em;
   background-color: #161515;
+  z-index: 1000;
 }
 
 .big-nav__links {
@@ -146,7 +172,7 @@ body {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .hero__text {
@@ -194,6 +220,96 @@ body {
   cursor: pointer;
 }
 
+.about-us__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-us__card {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: azure;
+  margin: 1em;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.about-us__card--first {
+  background-image: url("/images/elvis-small.jpg");
+  background-image: url("/images/shop-small.jpg");
+}
+
+.about-us__card--second {
+  background-image: url("/images/vinyl-stand-small.jpg");
+}
+
+.about-us__card--third {
+  background-image: url("/images/elvis-small.jpg");
+}
+
+.about-us__card .card-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 14, 13, 0.75);
+}
+
+.about-us__card .card-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 70%;
+  margin: auto;
+  color: white;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.about-us__card .card-text h4 {
+  color: #FF9F29;
+  font-weight: bold;
+  font-size: 2.4rem;
+}
+
+.about-us__card .card-text button {
+  border: none;
+  width: 100%;
+  padding: .8em;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media (min-width: 576px) {
   .hero__text h1 {
     font-size: 3.3rem;
@@ -207,6 +323,10 @@ body {
 }
 
 @media (min-width: 768px) {
+  .headline {
+    font-size: 3.4rem;
+    padding: 1.2em;
+  }
   .mobile-nav {
     display: none;
   }
@@ -228,9 +348,43 @@ body {
   .hero__text button {
     font-size: 2.2rem;
   }
+  .about-us__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .about-us__card {
+    width: 40%;
+    height: 400px;
+    margin: 2.5em;
+    -webkit-transition: -webkit-transform .1s;
+    transition: -webkit-transform .1s;
+    transition: transform .1s;
+    transition: transform .1s, -webkit-transform .1s;
+  }
+  .about-us__card:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .about-us__card .card-text {
+    max-width: 80%;
+    font-size: 2rem;
+  }
+  .about-us__card .card-text h4 {
+    font-size: 2.5rem;
+  }
+  .about-us__card .card-text button {
+    padding: .8em 1.2em;
+    font-size: 1.8rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .headline {
+    font-size: 4.6rem;
+    padding: 1.4em;
+  }
   .hero__text h1 {
     font-size: 6rem;
   }
@@ -239,6 +393,33 @@ body {
   }
   .hero__text button {
     font-size: 2.5rem;
+  }
+  .about-us__card {
+    margin: 1.43em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 31%;
+    height: 500px;
+    -webkit-transition: -webkit-transform .2s;
+    transition: -webkit-transform .2s;
+    transition: transform .2s;
+    transition: transform .2s, -webkit-transform .2s;
+  }
+  .about-us__card:hover {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  .about-us__card .card-text {
+    max-width: 80%;
+    font-size: 2.3rem;
+  }
+  .about-us__card .card-text h4 {
+    font-size: 3rem;
+  }
+  .about-us__card .card-text button {
+    padding: .8em 1.2em;
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
