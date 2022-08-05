@@ -112,6 +112,15 @@ body {
   z-index: 1000;
 }
 
+.big-nav__logo {
+  padding: .5em;
+}
+
+.big-nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .big-nav__links {
   position: relative;
   width: 100%;
@@ -130,7 +139,8 @@ body {
 }
 
 .big-nav__links .nav-options {
-  width: 70%;
+  right: 0;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,8 +154,38 @@ body {
 }
 
 .big-nav__links .nav-options a {
+  position: relative;
   text-decoration: none;
   color: inherit;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+}
+
+.big-nav__links .nav-options a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #FF9F29;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.big-nav__links .nav-options a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
 }
 
 .hero {

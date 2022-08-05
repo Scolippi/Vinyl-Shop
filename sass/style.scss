@@ -95,6 +95,13 @@ body{
     padding: 2.5em 3em;
     background-color: $black;
     z-index: 1000;
+    &__logo{
+        padding: .5em;
+    }
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
     &__links{
         position: relative;
         width: 100%;
@@ -107,16 +114,35 @@ body{
             }
         }
         .nav-options{
-            width: 70%;
-            // background-color: #fff;
+            right: 0;
+            width: 100%;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             gap: 2em;
             a{
+                position: relative;
                 text-decoration: none;
                 color: inherit;
+                transition: transform .2s;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: -4px;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    background-color: $orange;
+                    transform: scaleX(0);
+                    transition: transform .3s;
+                    transform-origin: right;
+                }
+                &:hover::after{
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
             }
+
       
         }
     }
