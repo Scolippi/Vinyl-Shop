@@ -365,6 +365,7 @@ body {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2em;
 }
 
 .about-us__card {
@@ -445,6 +446,28 @@ body {
   background-color: #222020;
   color: #FAF3E3;
   border: 1px solid #FAF3E3;
+}
+
+.bestsellers {
+  background-color: #222020;
+  overflow: hidden;
+}
+
+.bestsellers__carousel__area button {
+  display: none !important;
+}
+
+.bestsellers__carousel-card {
+  position: relative;
+  margin: 1em;
+  width: 50%;
+}
+
+.bestsellers__carousel-card img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 576px) {
@@ -530,6 +553,9 @@ body {
   }
   .hero__text button {
     font-size: 2.5rem;
+  }
+  .about-us__cards {
+    margin-bottom: 6em;
   }
   .about-us__card {
     margin: 1.43em;
