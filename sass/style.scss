@@ -204,8 +204,8 @@ body{
             margin-bottom: 1em;
         }
         p{
-            font-size: 1.6rem;
-            font-weight: 300;
+            font-size: 1.45rem;
+            color: rgb(218, 218, 218)
         }
         button{
             position: absolute;
@@ -397,6 +397,10 @@ body{
 .bestsellers{
     background-color: $grey;
     overflow: hidden;
+
+    &__carousel-area{
+        margin-bottom: 6em;
+    }
     
     &__carousel-card{
         position: relative;
@@ -469,6 +473,29 @@ body{
     
 }
 
+.contact{
+    &__information{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $white;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 3em;
+        p{
+            padding: .6em;
+        }
+        span{
+            font-size: 1.4rem;
+            color: rgb(218, 218, 218);
+            font-weight: normal;
+        }
+    }
+    &__location{
+        display: none;
+    }
+}
 
 
 // MEDIA
@@ -558,6 +585,12 @@ body{
             }
         }
     }
+    .contact{
+        &__information{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
 }
 
 @media (min-width:1024px){
@@ -618,6 +651,50 @@ body{
         }
         &__card-button{
             font-size: 2.1rem;
+        }
+    }
+}
+
+@media (min-width: 1200px){
+    .contact{
+        &__area{
+            display: flex;
+            flex-direction: row;
+        }
+        &__information{
+            width:50%;
+            flex-direction: column;
+            // justify-content: space-evenly;
+            justify-content: center;
+            p{
+                // letter-spacing: 2px;
+                font-size: 2rem;
+            }
+            span{
+                padding: 0.5em;
+                font-size: 1.7rem;
+                color: rgb(218, 218, 218);
+                font-weight: normal;
+                letter-spacing: 1px;
+            }
+        }
+        &__location{
+            position: relative;
+            display: block;
+            width: 70%;
+            // background-color: #fff;
+            height: 500px;
+            background-size: cover;
+            // overflow: hidden;
+            background-position: center;
+            img{
+                display:block;
+                margin-left: auto;
+                margin-right: auto;
+                // width: 100%;
+                height: 450px;
+                object-fit: cover;
+            }
         }
     }
 }

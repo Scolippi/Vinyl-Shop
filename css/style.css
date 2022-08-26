@@ -256,8 +256,8 @@ body {
 }
 
 .hero__text p {
-  font-size: 1.6rem;
-  font-weight: 300;
+  font-size: 1.45rem;
+  color: #dadada;
 }
 
 .hero__text button {
@@ -457,6 +457,10 @@ body {
   overflow: hidden;
 }
 
+.bestsellers__carousel-area {
+  margin-bottom: 6em;
+}
+
 .bestsellers__carousel-card {
   position: relative;
   margin: 1em;
@@ -547,6 +551,40 @@ body {
   text-decoration: underline;
 }
 
+.contact__information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FAF3E3;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 3em;
+}
+
+.contact__information p {
+  padding: .6em;
+}
+
+.contact__information span {
+  font-size: 1.4rem;
+  color: #dadada;
+  font-weight: normal;
+}
+
+.contact__location {
+  display: none;
+}
+
 @media (min-width: 576px) {
   .hero__text h1 {
     font-size: 3.3rem;
@@ -615,6 +653,14 @@ body {
     padding: .8em 1.2em;
     font-size: 1.8rem;
   }
+  .contact__information {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -670,6 +716,54 @@ body {
   }
   .bestsellers__card-button {
     font-size: 2.1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact__area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact__information {
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact__information p {
+    font-size: 2rem;
+  }
+  .contact__information span {
+    padding: 0.5em;
+    font-size: 1.7rem;
+    color: #dadada;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+  .contact__location {
+    position: relative;
+    display: block;
+    width: 70%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
+  .contact__location img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 450px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
