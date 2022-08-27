@@ -26,7 +26,7 @@
 //   });
 
 $('.bestsellers__carousel-area').slick({
-  dots: false,
+  dots: true,
   infinite: true,
   speed: 300,
   slidesToShow: 1,
