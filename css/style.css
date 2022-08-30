@@ -124,7 +124,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-decoration: none;
   padding: 2.2em;
   background-color: #11100e;
@@ -150,7 +150,7 @@ body {
 
 .big-nav__links .name {
   width: 30%;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .big-nav__links .name span {
@@ -169,7 +169,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2em;
+  gap: 2.5em;
 }
 
 .big-nav__links .nav-options a {
@@ -336,6 +336,7 @@ body {
 .hero .hero-text-big__button {
   position: absolute;
   width: 50%;
+  height: 100%;
   right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,13 +350,13 @@ body {
 }
 
 .hero .hero-text-big__button button {
-  border: none;
-  padding: 1em 2em;
+  border: 2px solid #FF9F29;
+  padding: .6em 1.2em;
   border-radius: 8px;
-  font-size: 2.4rem;
+  font-size: 3.5rem;
   font-weight: bold;
-  background-color: #FF9F29;
-  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.55);
+  color: #FF9F29;
   cursor: pointer;
 }
 
@@ -391,15 +392,15 @@ body {
 }
 
 .about-us__card--first {
-  background-image: url("/images/shop-small.jpg");
+  background-image: url("../images/shop-small.jpg");
 }
 
 .about-us__card--second {
-  background-image: url("/images/vinyl-stand-small.jpg");
+  background-image: url("../images/vinyl-stand-small.jpg");
 }
 
 .about-us__card--third {
-  background-image: url("/images/elvis-small.jpg");
+  background-image: url("../images/elvis-small.jpg");
 }
 
 .about-us__card .card-background {
@@ -638,7 +639,7 @@ body {
 
 @media (min-width: 768px) {
   .headline {
-    font-size: 3.4rem;
+    font-size: 3rem;
     padding: 1.2em;
   }
   .mobile-nav {
@@ -650,7 +651,7 @@ body {
     display: flex;
   }
   .hero__image {
-    background-image: url("/images/shop-background-big.jpg");
+    background-image: url("../images/shop-background-big.jpg");
     height: 50vh;
   }
   .hero__text h1 {
@@ -704,7 +705,7 @@ body {
 
 @media (min-width: 1024px) {
   .headline {
-    font-size: 4.6rem;
+    font-size: 3.4rem;
     padding: 1.4em;
   }
   .hero__text h1 {
@@ -759,6 +760,9 @@ body {
 }
 
 @media (min-width: 1200px) {
+  .headline {
+    font-size: 4rem;
+  }
   .contact__area {
     display: -webkit-box;
     display: -ms-flexbox;
